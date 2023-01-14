@@ -128,7 +128,7 @@ header {
 .banner-img {
     width: 100%;
     height: auto;
-    max-height: 100vh;
+    max-height: 95vh;
     object-fit: contain;
     padding: 0;
     margin: 0;
@@ -265,6 +265,7 @@ footer h3 {
 
     .skills-container {
         flex-flow: row nowrap;
+        justify-content: space-around;
     }
 
     /* .button {
@@ -283,10 +284,17 @@ footer h3 {
     } */
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
 
     main {
         padding: 3em;
+        padding-top: .5em;
+    }
+
+    .banner-img {
+        height: 90vh;
+        width: fit-content;
+        margin-left: 3em;
     }
 
 

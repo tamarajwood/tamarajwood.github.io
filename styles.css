@@ -56,6 +56,7 @@ h2 {
 
 header {
     display: flex;
+    flex-flow: column nowrap;
     width: 100%;
 }
 
@@ -110,17 +111,26 @@ footer {
 
 
 
-.img-intro-container {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("banner_version1.jpg");
+header {
+    height: fit-content;
+    /* background-image: url("banner_version1.jpg"); */
     background-color: #45506c;
-    background-size: 100%;
-    background-position: right bottom;
+    /* background-size: 100%; */
+    /* background-position: right bottom; */
     /* border-bottom: #45506c .75em solid; */
     /* transition: all ease-in-out 500ms; */
     padding: 0em;
+    margin: 0;
     background-repeat: no-repeat;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    padding: 0;
+    margin: 0;
 }
 
 /* .img-intro-container:hover {
@@ -182,10 +192,10 @@ footer {
         background-image: url("portrait_color_long.jpg")
     } */
 
-    .img-intro-container {
+    /* .img-intro-container {
         background-image: url("banner_version2.jpg");
         background-size: 100% auto;
-    }
+    } */
 
     .img-nav {
         width: fit-content;
@@ -196,9 +206,9 @@ footer {
 @media (min-width: 750px) {
 
 
-    .img-intro-container {
+    /* .img-intro-container {
         padding: 0em 0em;
-    }
+    } */
 
     .img-nav {
         flex-flow: row nowrap;

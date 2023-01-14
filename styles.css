@@ -69,13 +69,14 @@ main {
     background-color:#c7a58d;
     /* padding: 1em; */
     color: #483c4e;
+    border-top: #45506c .75em solid;
 }
 
 .main-container {
     padding: 1em;
     display: flex;
     flex-flow: column nowrap;
-    border-top: #45506c .75em solid;
+    /* border-top: #45506c .75em solid; */
 }
 
 footer {
@@ -131,6 +132,7 @@ header {
     object-fit: contain;
     padding: 0;
     margin: 0;
+    margin-top: 3em;
 }
 
 /* .img-intro-container:hover {
@@ -141,6 +143,13 @@ header {
 
 .nav-container {
     background-color: #424b68;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.name {
+    display: none;
 }
 
 
@@ -177,10 +186,16 @@ header {
     display: none;
 } */
 
+footer h3 {
+    margin: 2em;
+    color: #c7a58d;
+}
+
 @media (min-width: 500px) {
 
     main {
         padding: 2em;
+        padding-top: .5em;
     }
 
     /* .nav-container {
@@ -197,10 +212,34 @@ header {
         background-size: 100% auto;
     } */
 
+    .nav-container {
+        display: flex;
+        flex-flow: row nowrap;
+    }
     .img-nav {
         width: fit-content;
-        margin: 0em auto;
+        margin-left: auto;
     }
+
+    .img-nav a {
+        font-size: 1.25em;
+        margin: 0em;
+    }
+
+    .button {
+        margin: .5em .5em .5em .5em;
+    }
+
+    .name {
+        margin: .45em;
+        display: block;
+        color:#ce896c;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 1.25em;
+        padding: 0;
+    }
+
 }
 
 @media (min-width: 750px) {
@@ -210,25 +249,25 @@ header {
         padding: 0em 0em;
     } */
 
-    .img-nav {
+    /* .img-nav {
         flex-flow: row nowrap;
         height:fit-content;
-        padding: 0;
+        padding: 0; */
         /* border-bottom: #110F10 solid .4em;
         border-left: #110F10 solid .4em;
         border-right: #110F10 solid .4em; */
-        border-radius: 1em;
-    }
+        /* border-radius: 1em;
+    } */
 
-    .img-nav a {
+    /* .img-nav a {
         font-size:calc(4vw);
-    }
+    } */
 
     .skills-container {
         flex-flow: row nowrap;
     }
 
-    .button {
+    /* .button {
         display: flex;
         width: 100%;
         height: fit-content;
@@ -241,7 +280,7 @@ header {
     .button:hover {
         background-color:#DFE0E5;
         transition: all ease-in-out 150ms;
-    }
+    } */
 }
 
 @media (min-width: 1100px) {

@@ -2,6 +2,10 @@
 check spacing on projects title once you get a couple projects in there
 need scrolling nav */
 
+html,body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 html {
     box-sizing: border-box;
 }
@@ -16,16 +20,20 @@ body {
     background-color: #262626;
     padding: 0em;
     margin: 0em;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    font-size: 1em;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.15em;
     line-height: 1.25em;
     text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Slab', serif;
+h2, h3, h4, h5, h6 {
     text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 700;
 }
 
 h1 {
@@ -39,6 +47,8 @@ h3 {
 
 h2 {
     font-size: 2em;
+    margin: 1.5em;
+    margin-top: 2em;
 }
 
 header {
@@ -63,7 +73,8 @@ main {
 
 .main-container {
     padding: 1.5em;
-    padding-top: 1em;
+    padding-top: 0em;
+    padding-bottom: 6em;
     display: flex;
     flex-flow: column nowrap;
     /* border-top: #45506c .75em solid; */
@@ -81,18 +92,26 @@ footer {
 }
 
 .headshot {
-    width: 85%;
+    width: 100%;
+    margin: 1.5em;
     max-width: 25em;
     margin: auto;
     height: auto;
     object-fit: contain;
     overflow: hidden;
-    border: .75em solid;
+    /* border: .75em solid;
     border-color: #dfbea7;
-    box-shadow: rgba(60, 63, 66, 0.342) 0px .25em .5em;
+    box-shadow: rgba(60, 63, 66, 0.342) 0px .25em .5em; */
 }
 
 .skills-container {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background-color: #45506c;
+    color: #dfbea7;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -102,6 +121,9 @@ footer {
     margin: .5em;
 }
 
+.bio, .projects {
+    margin-bottom: 3em;
+}
 
 
 header {
@@ -159,6 +181,10 @@ p a {
     color: #525e86;
 }
 
+.bio-info {
+    margin-bottom: 0em;
+}
+
 .img-nav a {
     text-align: center;
     color: #dfbea7;
@@ -183,6 +209,73 @@ p a {
 /* h1 {
     display: none;
 } */
+.headshot-container {
+    width: fit-content;
+    height: fit-content;
+    max-width: 25em;
+    padding: 1.5em 0em 1.5em 0em;
+    background-color: #dfbea7;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(60, 63, 66, 0.342) 0px .25em .5em;
+}
+.project-1, .project-2 {
+    max-width: 25em;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    margin: 4em auto 0em auto;
+    text-decoration: none;
+    background-color: #dfbea7;
+    box-shadow: rgba(60, 63, 66, 0.342) 0px .25em .5em;
+    color: #3e4a71;
+}
+
+.project-1 img, .project-2 img {
+    width: 100%;
+    margin: 1.5em;
+    max-width: 25em;
+    align-self: center;
+    height: auto;
+}
+
+.project-1 h3, .project-2 h3 {
+    margin: 0em;
+}
+
+.project-1 p, .project-2 p {
+    margin-bottom: 1.5em;
+}
+
+.contact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.contact-title {
+    width: 100%;
+}
+
+.contact p {
+    width: 100%;
+}
+
+.linkedin-button, .github-button {
+    background-color: #dfbea7;
+    box-shadow: rgba(60, 63, 66, 0.342) 0px .25em .5em;
+    color: #3e4a71;
+    text-decoration: none;
+    width: fit-content;
+    padding: .5em 1.5em .5em 1.5em;
+    max-width: 50%;
+}
+
+.linkedin-button {
+    margin-right: 1.5em;
+}
 
 footer h3 {
     margin: 3em;
@@ -246,44 +339,16 @@ footer h3 {
 
 @media (min-width: 750px) {
 
-
-    /* .img-intro-container {
-        padding: 0em 0em;
-    } */
-
-    /* .img-nav {
-        flex-flow: row nowrap;
-        height:fit-content;
-        padding: 0; */
-        /* border-bottom: #110F10 solid .4em;
-        border-left: #110F10 solid .4em;
-        border-right: #110F10 solid .4em; */
-        /* border-radius: 1em;
-    } */
-
-    /* .img-nav a {
-        font-size:calc(4vw);
-    } */
-
     .skills-container {
         flex-flow: row nowrap;
         justify-content: space-around;
     }
 
-    /* .button {
-        display: flex;
+    .nav-container {
+        padding: .25em 2em .25em 2em;
+        z-index: 3;
         width: 100%;
-        height: fit-content;
-        justify-content: space-around;
-        margin: .25em;
-        padding: 0em;
-        border-radius: 1em;
     }
-
-    .button:hover {
-        background-color:#DFE0E5;
-        transition: all ease-in-out 150ms;
-    } */
 }
 
 @media (min-width: 900px) {
@@ -300,12 +365,6 @@ footer h3 {
         margin-right: auto;
     }
 
-    .nav-container {
-        padding: .25em 2em .25em 2em;
-        z-index: 3;
-        width: 100%;
-    }
-
     header {
         background-image: linear-gradient(to top, #c7a58d, #45506c, #45506c00);
         flex-flow: row wrap;
@@ -318,7 +377,11 @@ footer h3 {
         max-width: 70%;
         max-height: 90vh;
         width: fit-content;
-        margin-left: 3em;
+        margin-top: 4em;
+        /* margin-left: -4em; */
+        /* border-top: solid 1.5em #dfbea7;
+        border-bottom: solid 1.5em #dfbea7; */
+        /* margin-left: 3em; */
     }
 
     .header-title {
@@ -327,16 +390,19 @@ footer h3 {
         max-width: 40%;
         width: fit-content;
         height: fit-content;
-        margin-left: -16em;
+        margin-left: -12em;
         margin-top: 7.75em;
         /* position: absolute;
         right: 2em;
         top: 13em; */
-        /* background-color: #424b68e0; */
-        background-image: linear-gradient(to bottom, #45506c, #45506cd4,  #45506c5a, #45506c00);
+        background-color: #45506c;
+        box-shadow: rgba(60, 63, 66, 0.342) 0px .25em .5em;
+        /* border-top: solid 1.5em #dfbea7;
+        border-bottom: solid 1.5em #dfbea7; */
+        /* background-image: linear-gradient(to bottom, #45506c, #45506cd4,  #45506c5a, #45506c00); */
         /* box-shadow: rgba(60, 63, 66, 0.342) 0px .25em .5em; */
         padding: 1.5em;
-        border-radius: 3em .5em 3em .5em;
+        /* border-radius: 3em .5em 3em .5em; */
     }
 
     .header-title h1 {
@@ -350,11 +416,11 @@ footer h3 {
         margin-top: 1em;
     }
 
-    .bio-title, .job-title, .skills-container {
+    .bio-title, .job-title{
         width: 100%;
     }
 
-    .headshot, .bio-info {
+    .headshot-container, .bio-info {
         width: 50%;
         margin-top: 2em;
         margin-bottom: 4em;
@@ -368,7 +434,7 @@ footer h3 {
         order: 2;
     }
 
-    .headshot {
+    .headshot-container {
         order: 4;
         /* box-shadow: rgba(60, 63, 66, 0.342) 0px .25em .5em; */
     }
@@ -383,11 +449,11 @@ footer h3 {
 
     .skills-container {
         order: 5;
-        background-color: #45506c;
-        color: #c69a7a;
-        padding-top: 1em;
-        padding-bottom: 1em;
-        border-radius: 3em .5em 3em .5em;
+        /* background-color: #45506c;
+        color: #c69a7a; */
+        padding-top: 2em;
+        padding-bottom: 2em;
+        /* border-radius: 3em .5em 3em .5em; */
         box-shadow: rgba(60, 63, 66, 0.342) 0px .25em .5em;
     }
 
@@ -405,28 +471,24 @@ footer h3 {
         text-decoration: overline;
     } 
 
-    /* h1 {
-        display:block;
-        line-height: 1.5em;
-        font-variant: small-caps;
-        font-size: 4em;
-    } */
+    .projects {
+        display: flex;
+        flex-flow: row wrap;
+    }
 
-    /* .img-intro-container {
-        padding: 0 3em;
-    } */
-    
+    .projects-title {
+        width: 100%;
+    }
 
-    /* .brief-intro {
-        display: contents;
-        font-size: 3em;
-    } */
+    .project-1, .project-2 {
+        max-width: 45%;
+    }
 }
 
 @media (min-width: 1100px) {
 
     .header-title {
-        right: 11em;
-        top: 10em;
+        margin-left: -10em;
+        margin-top: 8em;
     }
 }

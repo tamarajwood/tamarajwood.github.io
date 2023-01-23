@@ -69,6 +69,7 @@ main {
     padding: 0em;
     margin: 0em;
     border-top: #45506c .75em solid;
+    padding-top: 2em;
 }
 
 .main-container {
@@ -290,7 +291,6 @@ footer h3 {
 
     main {
         padding: 2em;
-        padding-top: .5em;
     }
 
     /* .nav-container {
@@ -338,6 +338,10 @@ footer h3 {
 }
 
 @media (min-width: 750px) {
+
+    body {
+        font-size: 1.25em;
+    }
 
     .skills-container {
         flex-flow: row nowrap;

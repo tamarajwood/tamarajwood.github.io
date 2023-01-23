@@ -359,7 +359,7 @@ footer h3 {
 
     main {
         padding: 3em;
-        padding-top: .5em;
+        padding-top: 0em;
         border: none;
     }
 
@@ -373,6 +373,22 @@ footer h3 {
         background-image: linear-gradient(to top, #c7a58d, #45506c, #45506c00);
         flex-flow: row wrap;
         justify-content: center;
+    }
+
+    .nav-container {
+        background-color: #26262600;
+        box-shadow: none;
+    }
+
+    .nav-container.scrolled {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        background-color: #424b68;
+        transition: background-color 200ms linear;
+    }
+
+    .img-nav a:hover {
+        transition: all ease-in-out 400ms;
+        color: #fcb481;
     }
 
     .banner-img {
@@ -417,16 +433,21 @@ footer h3 {
     .bio {
         display: flex;
         flex-flow: row wrap;
-        margin-top: 1em;
+        margin-bottom: 1em;
+        /* margin-top: 1em; */
     }
 
     .bio-title, .job-title{
         width: 100%;
     }
 
+    /* .bio-title h2 {
+        margin-top: 1em;
+    } */
+
     .headshot-container, .bio-info {
         width: 50%;
-        margin-top: 2em;
+        margin-top: 1em;
         margin-bottom: 4em;
     }
 
@@ -455,7 +476,7 @@ footer h3 {
         order: 5;
         /* background-color: #45506c;
         color: #c69a7a; */
-        padding-top: 2em;
+        padding-top: 1em;
         padding-bottom: 2em;
         /* border-radius: 3em .5em 3em .5em; */
         box-shadow: rgba(60, 63, 66, 0.342) 0px .25em .5em;
@@ -486,6 +507,18 @@ footer h3 {
 
     .project-1, .project-2 {
         max-width: 45%;
+        margin-top: 1em;
+    }
+
+    .project-1:hover, .project-2:hover {
+        margin-top: .75em;
+        transition: all ease-in-out 400ms;
+        box-shadow: rgba(60, 63, 66, 0.57) 0px .25em .5em;
+    }
+
+    .linkedin-button:hover, .github-button:hover {
+        transition: all ease-in-out 400ms;
+        box-shadow: rgba(60, 63, 66, 0.57) 0px .25em .5em;
     }
 }
 

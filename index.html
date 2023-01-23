@@ -98,5 +98,14 @@
         <footer>
             <h3>&copy; Tamara Wood 2023</h3>
         </footer>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(function () {
+                $(document).scroll(function () {
+                  var $navs = $(".nav-container");
+                  $navs.toggleClass('scrolled', $(this).scrollTop() > $navs.height());
+                });
+              });
+        </script>
     </body>
 </html>
